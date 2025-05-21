@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "noprop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch", "torchvision"]
+
+[project.scripts]
+noprop-simple = "noprop.simple:main"
+noprop-mnist = "noprop.mnist:main"
