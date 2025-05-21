@@ -41,24 +41,33 @@ current implementation  is slightly different. We leverage predefined ResNet Mod
  
 #### Quick Start 
 
-copy the code
+You can either install directly from the repository:
+
+```bash
+pip install git+https://github.com/yhgon/NoProp.git
 ```
+
+Or download the repository and install it in editable mode:
+
+```bash
 git clone https://github.com/yhgon/NoProp.git
+cd NoProp
+pip install --editable .
 ```
 
 run with default option for mnist dataset
 ```
-python NoProp/src/nopropct_mnist.py
+noprop-mnist
 ```
 
 run with configure dataset and backbone model 
 ```
-python NoProp/src/noprop_simple.py --dataset cifar10 --backbone resnet50
+noprop-simple --dataset cifar10 --backbone resnet50
 ```
 
 run with configure dataset and backbone model  default epoch is `400`
 ```
-python NoProp/src/noprop_simple.py --dataset cifar100 --backbone resnet152
+noprop-simple --dataset cifar100 --backbone resnet152
 ```
 
 ## log 

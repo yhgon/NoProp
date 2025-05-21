@@ -277,6 +277,9 @@ def train_and_eval(backbone: str):
     del model, optim, tr, te, ds_train, ds_test
     torch.cuda.empty_cache(); gc.collect()
 
-if __name__ == '__main__':
+def main():
     for backbone in ['resnet18', 'resnet50', 'resnet152']:
         train_and_eval(backbone)
+
+if __name__ == '__main__':
+    main()

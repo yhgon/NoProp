@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "noprop"
+dynamic = ["version"]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch", "torchvision"]
+
+[project.scripts]
+noprop-simple = "noprop.simple:main"
+noprop-mnist = "noprop.mnist:main"
+
+[tool.hatch.version]
+source = "vcs"

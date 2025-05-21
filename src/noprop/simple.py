@@ -393,7 +393,7 @@ def train_and_eval(backbone: str, time_emb_dim: int, embed_dim: int, dataset: st
     del model, optimizer, ds_train, ds_test, tr_loader, te_loader
     torch.cuda.empty_cache(); gc.collect()
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', choices=['mnist','cifar10','cifar100'], required=True)
     parser.add_argument('--data-root', default='./data')
@@ -412,3 +412,6 @@ if __name__ == '__main__':
         data_root   = args.data_root,
         epoches     = args.epoches,
     )
+
+if __name__ == '__main__':
+    main()
